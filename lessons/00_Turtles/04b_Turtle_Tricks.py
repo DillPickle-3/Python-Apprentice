@@ -13,21 +13,11 @@ import turtle                           # Tell Python we want to work with the t
 turtle.setup (width=600, height=600)    # Set the size of the window
 tina = turtle.Turtle()                  # Create a turtle named tina
 
-tina.pencolor('red')
-tina.forward(110)
-tina.left(30)
-tina.pencolor('blue')
-tina.forward(80)
-tina.left(75)
-tina.pencolor('green')
-tina.forward(80)
-tina.left(80)
-tina.pencolor('black')
-tina.forward(80)
-tina.left(50)
-tina.pencolor('purple')
-tina.forward(135)
-tina.left(30)
+for i in range(5):
+    tina.pencolor('red')
+    tina.forward(100)
+    tina.left(72)
+
 
 
 
