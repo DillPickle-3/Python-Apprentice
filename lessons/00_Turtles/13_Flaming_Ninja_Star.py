@@ -31,7 +31,7 @@ t.shape("turtle")
 
 t.width(2) 
 
-t.speed(0) 
+t.speed(0.98) 
 
 for i in range(25):
     t.pencolor(getRandomColor())
