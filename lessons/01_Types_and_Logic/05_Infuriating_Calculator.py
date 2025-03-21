@@ -31,10 +31,24 @@ number = simpledialog.askinteger("Number", "Pick a number")    # Ask the user fo
 
 hello = simpledialog.askinteger("Number", "Pick another number")    # Ask the user for the second number
 
-operation = simpledialog.askinteger("Number", "Pick an operation")  # Ask the user for the math operation
+operation = simpledialog.askstring("Number", "Pick an operation")  # Ask the user for the math operation
 
-# Use if-elif-else statements to provide the desired math operation on the numbers and display the result.
+if operation == 'add':# Use if-elif-else statements to provide the desired math operation on the numbers and display the result.
+   hi = number + hello
+   messagebox.showinfo('Sum', hi)
+   
+elif operation == 'subtract': # If the user enters an unknown operation, display an error message. ( use messagebox.showerror()
+   paper = number - hello
+   messagebox.showinfo('Difference', paper)
 
-# If the user enters an unknown operation, display an error message. ( use messagebox.showerror()
+elif operation == 'multiply': # Keep the window open
+   pen = number * hello
+   messagebox.showinfo('Product', pen)
 
-# Keep the window open
+elif operation == 'divide':
+   car = number / hello
+   messagebox.showinfo('Quotient', car)
+
+else:
+   messagebox.showerror()
+
