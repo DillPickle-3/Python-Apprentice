@@ -23,7 +23,7 @@ tina.speed(2)                           # Make the turtle move as fast, but not 
 
 
 forwards = [50, 43, 76, 123]
-lefts = [25, 34, 65, 67]
+lefts = [167, 205, 65, 67]
 colors = ["blue", "red", "green", "purple"]
 
 for  i in range(len(colors)):
