@@ -17,7 +17,7 @@ Additionally, If you are displaying a number  color the numbers as follows:
 Here is how you can display a number in your grid. Call this function in your loop
 to display the number in the grid cell at the row and column you specify.
 
-    Text(app, text=str(number), grid=[col, row], color=color)
+Text(app, text=str(number), grid=[col, row], color=color)
 
 Or to display a badger: 
     
@@ -31,14 +31,27 @@ from guizero import App, Box, Text
 
 app = App("Numbers Grid", layout="grid")
 
-Text(app, text=str(number), grid=[9, 5], color="color")
+count = 1
 
-# Create a 10x10 grid using nested loops
+for i in range(10):
+    for j in range(1,11):
+       Text(app, text = str(count), grid = [j * 10, i * 10])
+       count += 1  
+    if count / 15 == 0:
+            print("🐍")
+    elif count / 3 == 0:
+            print("🍄")
+    elif count / 5 == 0:
+            print("🦡") 
+    print("")
+print()
+
+#Create a 10x10 grid using nested loops
 # Or you can use a single loop and calculate the row and column
 
 # In the loop, calculate or increment the number
 
-# Use % determing the display, using fizzbuzz rules
+# Use % determining the display, using fizzbuzz rules
 
 # If you are displaying a number, calculate the sum of the digits and determine the color
 
