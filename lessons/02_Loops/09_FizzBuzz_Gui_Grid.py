@@ -27,6 +27,7 @@ HINT: You can use % and // to get the first and last digit of a number,
 our you can convert the number to a string and iterate over the digits
 
 """
+
 from guizero import App, Box, Text
 
 app = App("Numbers Grid", layout="grid")
@@ -34,16 +35,24 @@ app = App("Numbers Grid", layout="grid")
 count = 1
 
 for i in range(10):
-    for j in range(1,11):
-       Text(app, text = str(count), grid = [j * 10, i * 10])
-       count += 1  
-    if count / 15 == 0:
-            print("🐍")
-    elif count / 3 == 0:
-            print("🍄")
-    elif count / 5 == 0:
-            print("🦡") 
-    print("")
+    for j in range(10):
+       # Text(app, text = str(count), grid = [j, i])
+        
+       if count % 15 == 0:
+            
+            Text(app, text = "🐍", grid = [j, i])
+       elif count % 3 == 0:
+        
+            Text(app, text = '🍄', grid = [j, i])
+       elif count % 5 == 0:
+            
+            Text(app, text = '🦡', grid = [j, i])
+       elif count % 2:
+            
+            Text(app, text = str(count), grid = [j, i], color = "red")
+       else:
+            Text(app, text = str(count), grid = [j, i], color = "blue")
+       count += 1 
 print()
 
 #Create a 10x10 grid using nested loops
