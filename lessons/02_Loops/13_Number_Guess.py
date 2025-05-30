@@ -41,24 +41,24 @@ def ask_integer(prompt):
             print("Please enter a valid number!")
 
 
-n = random.randint(1, 100)
+n = random.randint(1, 1000000000)
 while True:
     if n % 7 == 0:
-        n = random.randint(1, 100)
+        n = random.randint(1, 1000000000)
     else:
-        guess = ask_integer("Guess a number between 1 and 100: ")
+        guess = ask_integer("Guess a number between 1 and 1000000000: ")
 
     if guess % 7 == 0:
-        print("That is a bad number") #Pick the random number
+        print("That is a bad number.") #Pick the random number
         
     elif guess > n:
-        print("Guess lower")
+        print("Guess lower you dummy")
 
     elif guess < n:
-        print("Guess higher")
+        print("Guess higher you dummy")
 
     elif guess == n:
-        print("You got it!")
+        print("You got it! Play again")
         break   
     
     
